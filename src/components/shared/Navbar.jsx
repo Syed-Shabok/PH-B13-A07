@@ -56,7 +56,7 @@ const Navbar = () => {
             </ul>
           </div>
           <a className="btn btn-ghost gap-0 text-3xl font-extrabold">
-            Keen<span className="text-[#244d3f]">Keeper</span>
+            Keen<span className="text-[#244d3f] font-semibold">Keeper</span>
           </a>
         </div>
         <div className="navbar-end hidden lg:flex">
