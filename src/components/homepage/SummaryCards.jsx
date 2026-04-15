@@ -6,16 +6,16 @@ const SummaryCards = () => {
 
   return (
     <section>
-      <div className="my-10 grid grid-cols-4 gap-7">
-        <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-8 rounded-lg">
+      <div className="my-10 grid grid-cols-2 lg:grid-cols-4 gap-7">
+        <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-8 px-4 rounded-lg">
           <h3 className="text-3xl font-bold text-[#244D3F]">
             {friendsList.length}
           </h3>
 
-          <p className="text-lg text-gray-600">Total Friends</p>
+          <p className="md:text-lg text-gray-600 text-center">Total Friends</p>
         </div>
 
-        <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-8 rounded-lg">
+        <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-8 px-4 rounded-lg">
           <h3 className="text-3xl font-bold text-[#244D3F]">
             {
               friendsList.filter((friend) => friend.status === "on-track")
@@ -23,18 +23,18 @@ const SummaryCards = () => {
             }
           </h3>
 
-          <p className="text-lg text-gray-600">On Track</p>
+          <p className="md:text-lg text-gray-600 text-center">On Track</p>
         </div>
 
-        <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-8 rounded-lg">
+        <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-8 px-4 rounded-lg">
           <h3 className="text-3xl font-bold text-[#244D3F]">
             {friendsList.filter((friend) => friend.status === "overdue").length}
           </h3>
 
-          <p className="text-lg text-gray-600">Need Attention</p>
+          <p className="md:text-lg text-gray-600 text-center">Need Attention</p>
         </div>
 
-        <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-8 rounded-lg">
+        <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-8 px-4 rounded-lg">
           <h3 className="text-3xl font-bold text-[#244D3F]">
             {
               friendsList.filter((friend) => friend.days_since_contact <= 30)
@@ -42,7 +42,9 @@ const SummaryCards = () => {
             }
           </h3>
 
-          <p className="text-lg text-gray-600">Interactions This Month</p>
+          <p className="md:text-lg text-gray-600 text-center">
+            Interactions This Month
+          </p>
         </div>
       </div>
 

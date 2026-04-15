@@ -1,9 +1,13 @@
 import React from "react";
 import StatusTag from "../ui/StatusTag";
+import { Link } from "react-router";
 
 const FriendCard = ({ friend }) => {
   return (
-    <div className="flex flex-col items-center justify-center bg-[#FFFFFF] p-8 w-full gap-2 rounded-lg shadow-sm">
+    <Link
+      to={`/friendDetails/${friend.id}`}
+      className="flex flex-col items-center justify-center bg-[#FFFFFF] p-8 w-full gap-2 rounded-lg shadow-sm"
+    >
       <img
         src={friend.picture}
         className="rounded-full w-25"
@@ -26,7 +30,7 @@ const FriendCard = ({ friend }) => {
       </div>
 
       <StatusTag status={friend.status} />
-    </div>
+    </Link>
   );
 };
 
