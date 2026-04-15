@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useParams } from "react-router";
 import { FriendContext } from "../../context/FriendContextProvider";
 import StatusTag from "../../components/ui/StatusTag";
@@ -12,14 +12,33 @@ import { FiArchive } from "react-icons/fi";
 import { TbPhoneCall } from "react-icons/tb";
 import { BiMessageDots } from "react-icons/bi";
 import { PiVideoCameraBold } from "react-icons/pi";
+import { toast } from "react-toastify";
 
 const FriendDetails = () => {
   const { friendId } = useParams();
   const { friendsList, loading } = useContext(FriendContext);
+  const [interactions, setInteractions] = useState([]);
 
   const friend = friendsList.find((f) => f.id === Number(friendId));
 
-  console.log(friend);
+  // console.log(friend);
+
+  const handleInteraction = (interactionType) => {
+    const interaction = {
+      type: interactionType,
+      personName: friend.name,
+      personId: friend.friendId,
+      time: Date.now(),
+    };
+
+    setInteractions([...interactions, interaction]);
+
+    toast.success(`${interactionType} with ${friend.name}`, {
+      position: "top-center",
+    });
+  };
+
+  console.log(interactions);
 
   return loading ? (
     <LoadingSpinner />
@@ -132,15 +151,24 @@ const FriendDetails = () => {
 
           {/* Grid Button container */}
           <div className="grid grid-cols-3 gap-5">
-            <button className="btn xl:px-25 py-6 h-full text-xl bg-[#F8FAFC] flex flex-col items-center justify-center font-normal rounded-lg">
+            <button
+              onClick={() => handleInteraction("Call")}
+              className="btn xl:px-25 py-6 h-full text-xl bg-[#F8FAFC] flex flex-col items-center justify-center font-normal rounded-lg"
+            >
               <TbPhoneCall size={25} md:size={32} /> Call
             </button>
 
-            <button className="btn xl:px-25 py-6 h-full text-xl bg-[#F8FAFC] flex flex-col items-center justify-center font-normal rounded-lg ">
+            <button
+              onClick={() => handleInteraction("Text")}
+              className="btn xl:px-25 py-6 h-full text-xl bg-[#F8FAFC] flex flex-col items-center justify-center font-normal rounded-lg "
+            >
               <BiMessageDots size={25} md:size={32} /> Text
             </button>
 
-            <button className="btn xl:px-25 py-6  h-full text-xl bg-[#F8FAFC] flex flex-col items-center justify-center font-normal rounded-lg">
+            <button
+              onClick={() => handleInteraction("Video")}
+              className="btn xl:px-25 py-6 h-full text-xl bg-[#F8FAFC] flex flex-col items-center justify-center font-normal rounded-lg"
+            >
               <PiVideoCameraBold size={25} md:size={32} /> Video
             </button>
           </div>
