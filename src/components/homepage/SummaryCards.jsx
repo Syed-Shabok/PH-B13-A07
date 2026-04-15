@@ -9,7 +9,7 @@ const SummaryCards = () => {
       {/* Summary Card Container */}
       <div className="my-10 grid grid-cols-2 lg:grid-cols-4 gap-7">
         {/* Summary Card */}
-        <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-8 px-4 rounded-lg">
+        <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-8 px-4 rounded-lg shadow-sm border border-gray-100">
           <h3 className="text-3xl font-bold text-[#244D3F]">
             {friendsList.length}
           </h3>
@@ -18,7 +18,7 @@ const SummaryCards = () => {
         </div>
 
         {/* Summary Card */}
-        <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-8 px-4 rounded-lg">
+        <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-8 px-4 rounded-lg shadow-sm border border-gray-100">
           <h3 className="text-3xl font-bold text-[#244D3F]">
             {
               friendsList.filter((friend) => friend.status === "on-track")
@@ -30,7 +30,7 @@ const SummaryCards = () => {
         </div>
 
         {/* Summary Card */}
-        <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-8 px-4 rounded-lg">
+        <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-8 px-4 rounded-lg shadow-sm border border-gray-100">
           <h3 className="text-3xl font-bold text-[#244D3F]">
             {friendsList.filter((friend) => friend.status === "overdue").length}
           </h3>
@@ -38,7 +38,7 @@ const SummaryCards = () => {
           <p className="md:text-lg text-gray-600 text-center">Need Attention</p>
         </div>
 
-        <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-8 px-4 rounded-lg">
+        <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-8 px-4 rounded-lg shadow-sm border border-gray-100">
           <h3 className="text-3xl font-bold text-[#244D3F]">
             {
               friendsList.filter((friend) => friend.days_since_contact <= 30)

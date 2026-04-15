@@ -25,14 +25,14 @@ const FriendDetails = () => {
     <LoadingSpinner />
   ) : (
     <section>
-      <div className="py-20 px-40 grid grid-cols-3 gap-7">
-        {/* Column 1 */}
-        <div className="space-y-4">
+      <div className="py-8 lg:py-20 px-5 xl:px-40 grid  md:grid-cols-2 lg:grid-cols-3 gap-7">
+        {/* Friend Card Part */}
+        <div className="md:row-span-3 space-y-4">
           {/* Friend Image card */}
-          <div className="flex flex-col items-center justify-center bg-[#FFFFFF] p-8 w-full gap-2 rounded-lg shadow-sm">
+          <div className="flex flex-col items-center justify-center bg-[#FFFFFF] p-8  w-full gap-2 rounded-lg shadow-sm">
             <img
               src={friend.picture}
-              className="rounded-full w-25"
+              className="rounded-full w-25 border-3 border-green-300"
               alt={`Photo of ${friend.name}`}
             />
 
@@ -72,80 +72,77 @@ const FriendDetails = () => {
           </div>
         </div>
 
-        {/* Column 2 & 3 */}
-        <div className="col-span-2 space-y-7">
-          {/* Summary Card Container */}
-          <div className="grid grid-cols-3 gap-7">
-            {/* Summary Card */}
-            <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-12 px-4 rounded-lg shadow-sm">
-              <h3 className="text-3xl font-bold text-[#244D3F]">
-                {friend.days_since_contact}
-              </h3>
-
-              <p className="md:text-xl text-gray-600 text-center">
-                Days Since Contact
-              </p>
-            </div>
-
-            {/* Summary Card */}
-            <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-12 px-4 rounded-lg shadow-sm">
-              <h3 className="text-3xl font-bold text-[#244D3F]">
-                {friend.goal}
-              </h3>
-
-              <p className="md:text-xl text-gray-600 text-center">
-                Goal (Days)
-              </p>
-            </div>
-
-            {/* Summary Card */}
-            <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-12 px-4 rounded-lg shadow-sm">
-              <h3 className="text-3xl font-bold text-[#244D3F]">
-                {new Date(friend.next_due_date).toLocaleDateString("en-US", {
-                  month: "short",
-                  day: "numeric",
-                  year: "numeric",
-                })}
-              </h3>
-
-              <p className="md:text-xl text-gray-600 text-center">Next Due</p>
-            </div>
-          </div>
-
-          {/* Middle Container  */}
-          <div className="space-y-6 py-12 px-7 bg-[#FFFFFF] rounded-lg shadow-sm">
-            <div className="flex justify-between items-center">
-              <h3 className="text-2xl font-medium text-[#244D3F]">
-                Relationship Goal
-              </h3>
-              <button className="btn bg-[#F8FAFC] p-5 text-lg">Edit</button>
-            </div>
-            <h3 className="text-xl text-gray-500">
-              Connect every{" "}
-              <span className="text-black font-bold">{`${friend.goal} days`}</span>
-            </h3>
-          </div>
-
-          {/* Functional Buttons Container */}
-          <div className="py-12 px-7 bg-[#FFFFFF] rounded-lg shadow-sm space-y-6">
-            <h3 className="text-2xl font-medium text-[#244D3F] ">
-              Quick Check-In
+        {/* Summary Card Container */}
+        <div className="md:row-span-1  lg:col-span-2 grid grid-cols-1 lg:grid-cols-3 gap-7 h-full">
+          {/* Summary Card */}
+          <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-5 md:py-9 lg:py-12 px-4 rounded-lg shadow-sm">
+            <h3 className="text-3xl font-bold text-[#244D3F] text-center">
+              {friend.days_since_contact}
             </h3>
 
-            {/* Grid Button container */}
-            <div className="grid grid-cols-3 gap-5">
-              <button className="btn px-25 py-6 h-auto text-xl bg-[#F8FAFC] flex flex-col items-center justify-center font-normal rounded-lg">
-                <TbPhoneCall size={32} /> Call
-              </button>
+            <p className="md:text-xl text-gray-600 text-center">
+              Days Since Contact
+            </p>
+          </div>
 
-              <button className="btn px-25 py-6 h-auto text-xl bg-[#F8FAFC] flex flex-col items-center justify-center font-normal rounded-lg">
-                <BiMessageDots size={32} /> Text
-              </button>
+          {/* Summary Card */}
+          <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-5 md:py-9 lg:py-12 px-4 rounded-lg shadow-sm">
+            <h3 className="text-3xl font-bold text-[#244D3F] text-center">
+              {friend.goal}
+            </h3>
 
-              <button className="btn px-25 py-6 h-auto text-xl bg-[#F8FAFC] flex flex-col items-center justify-center font-normal rounded-lg">
-                <PiVideoCameraBold size={32} /> Video
-              </button>
-            </div>
+            <p className="md:text-xl text-gray-600 text-center">Goal (Days)</p>
+          </div>
+
+          {/* Summary Card */}
+          <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-5 md:py-9 lg:py-12 px-4 rounded-lg shadow-sm">
+            <h3 className="text-3xl font-bold text-[#244D3F] text-center">
+              {new Date(friend.next_due_date).toLocaleDateString("en-US", {
+                month: "short",
+                day: "numeric",
+                year: "numeric",
+              })}
+            </h3>
+
+            <p className="md:text-xl text-gray-600 text-center">Next Due</p>
+          </div>
+        </div>
+
+        {/* Middle Container  */}
+        <div className="space-y-6 md:row-span-1 lg:col-span-2 py-6 md:py-14 lg:py-12 px-7 h-full bg-[#FFFFFF] rounded-lg shadow-sm flex flex-col justify-center">
+          <div className="flex justify-between items-center">
+            <h3 className="text-2xl font-medium text-[#244D3F]">
+              Relationship Goal
+            </h3>
+            <button className="btn bg-[#F8FAFC] md:p-5 text-base md:text-lg">
+              Edit
+            </button>
+          </div>
+          <h3 className="text-xl text-gray-500">
+            Connect every{" "}
+            <span className="text-black font-bold">{`${friend.goal} days`}</span>
+          </h3>
+        </div>
+
+        {/* Functional Buttons Container */}
+        <div className="md:col-span-2 row-span-1 h-full py-12 px-7 bg-[#FFFFFF] rounded-lg shadow-sm space-y-6">
+          <h3 className="text-2xl font-medium text-[#244D3F] ">
+            Quick Check-In
+          </h3>
+
+          {/* Grid Button container */}
+          <div className="grid grid-cols-3 gap-5">
+            <button className="btn xl:px-25 py-6 h-full text-xl bg-[#F8FAFC] flex flex-col items-center justify-center font-normal rounded-lg">
+              <TbPhoneCall size={25} md:size={32} /> Call
+            </button>
+
+            <button className="btn xl:px-25 py-6 h-full text-xl bg-[#F8FAFC] flex flex-col items-center justify-center font-normal rounded-lg ">
+              <BiMessageDots size={25} md:size={32} /> Text
+            </button>
+
+            <button className="btn xl:px-25 py-6  h-full text-xl bg-[#F8FAFC] flex flex-col items-center justify-center font-normal rounded-lg">
+              <PiVideoCameraBold size={25} md:size={32} /> Video
+            </button>
           </div>
         </div>
       </div>

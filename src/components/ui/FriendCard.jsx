@@ -6,11 +6,11 @@ const FriendCard = ({ friend }) => {
   return (
     <Link
       to={`/friendDetails/${friend.id}`}
-      className="flex flex-col items-center justify-center bg-[#FFFFFF] p-8 w-full gap-2 rounded-lg shadow-sm"
+      className="flex flex-col items-center justify-center bg-[#FFFFFF] p-8 w-full gap-2 rounded-lg shadow-sm border border-gray-100"
     >
       <img
         src={friend.picture}
-        className="rounded-full w-25"
+        className="rounded-full border-3 border-green-300 w-25"
         alt={`Photo of ${friend.name}`}
       />
 
