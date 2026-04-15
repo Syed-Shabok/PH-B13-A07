@@ -6,7 +6,9 @@ const SummaryCards = () => {
 
   return (
     <section>
+      {/* Summary Card Container */}
       <div className="my-10 grid grid-cols-2 lg:grid-cols-4 gap-7">
+        {/* Summary Card */}
         <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-8 px-4 rounded-lg">
           <h3 className="text-3xl font-bold text-[#244D3F]">
             {friendsList.length}
@@ -15,6 +17,7 @@ const SummaryCards = () => {
           <p className="md:text-lg text-gray-600 text-center">Total Friends</p>
         </div>
 
+        {/* Summary Card */}
         <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-8 px-4 rounded-lg">
           <h3 className="text-3xl font-bold text-[#244D3F]">
             {
@@ -26,6 +29,7 @@ const SummaryCards = () => {
           <p className="md:text-lg text-gray-600 text-center">On Track</p>
         </div>
 
+        {/* Summary Card */}
         <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-8 px-4 rounded-lg">
           <h3 className="text-3xl font-bold text-[#244D3F]">
             {friendsList.filter((friend) => friend.status === "overdue").length}

@@ -9,7 +9,8 @@
     "tags": ["WORK", "TRAVEL"],
     "bio": "Former coworker who loves exploring new places and sharing travel stories.",
     "goal": 14,
-    "next_due_date": "2026-04-25"
+    "next_due_date": "2026-04-25",
+    "preferred_contact": "Text"
   },
   {
     "id": 2,
@@ -20,8 +21,9 @@
     "status": "almost due",
     "tags": ["GYM", "HOBBY"],
     "bio": "Workout partner and fitness enthusiast who keeps me motivated.",
-    "goal": 14,
-    "next_due_date": "2026-04-10"
+    "goal": 7,
+    "next_due_date": "2026-04-10",
+    "preferred_contact": "Call"
   },
   {
     "id": 3,
@@ -32,8 +34,9 @@
     "status": "overdue",
     "tags": ["FAMILY", "TRAVEL"],
     "bio": "Cousin who enjoys family gatherings and spontaneous road trips.",
-    "goal": 14,
-    "next_due_date": "2026-04-05"
+    "goal": 10,
+    "next_due_date": "2026-04-05",
+    "preferred_contact": "Video"
   },
   {
     "id": 4,
@@ -44,8 +47,9 @@
     "status": "on-track",
     "tags": ["WORK", "TECH"],
     "bio": "Tech colleague who collaborates with me on exciting side projects.",
-    "goal": 14,
-    "next_due_date": "2026-04-28"
+    "goal": 21,
+    "next_due_date": "2026-04-28",
+    "preferred_contact": "Text"
   },
   {
     "id": 5,
@@ -56,8 +60,9 @@
     "status": "overdue",
     "tags": ["HOBBY", "ART"],
     "bio": "Creative friend who loves painting and handmade crafts.",
-    "goal": 14,
-    "next_due_date": "2026-03-30"
+    "goal": 30,
+    "next_due_date": "2026-03-30",
+    "preferred_contact": "Video"
   },
   {
     "id": 6,
@@ -69,7 +74,8 @@
     "tags": ["TECH", "GAMING"],
     "bio": "Gaming buddy and developer friend who enjoys coding challenges.",
     "goal": 14,
-    "next_due_date": "2026-04-20"
+    "next_due_date": "2026-04-20",
+    "preferred_contact": "Call"
   },
   {
     "id": 7,
@@ -80,8 +86,9 @@
     "status": "almost due",
     "tags": ["STUDY", "WORK"],
     "bio": "Study partner and hardworking friend from university.",
-    "goal": 14,
-    "next_due_date": "2026-04-12"
+    "goal": 10,
+    "next_due_date": "2026-04-12",
+    "preferred_contact": "Text"
   },
   {
     "id": 8,
@@ -92,8 +99,9 @@
     "status": "on-track",
     "tags": ["SPORTS", "GYM"],
     "bio": "Football teammate and gym enthusiast.",
-    "goal": 14,
-    "next_due_date": "2026-04-29"
+    "goal": 7,
+    "next_due_date": "2026-04-29",
+    "preferred_contact": "Call"
   },
   {
     "id": 9,
@@ -105,7 +113,8 @@
     "tags": ["FAMILY", "FOOD"],
     "bio": "Close family friend who enjoys cooking and food adventures.",
     "goal": 14,
-    "next_due_date": "2026-03-28"
+    "next_due_date": "2026-03-28",
+    "preferred_contact": "Video"
   },
   {
     "id": 10,
@@ -116,8 +125,9 @@
     "status": "on-track",
     "tags": ["TRAVEL", "PHOTOGRAPHY"],
     "bio": "Adventure-loving photographer always planning the next trip.",
-    "goal": 14,
-    "next_due_date": "2026-04-22"
+    "goal": 21,
+    "next_due_date": "2026-04-22",
+    "preferred_contact": "Call"
   },
   {
     "id": 11,
@@ -128,8 +138,9 @@
     "status": "almost due",
     "tags": ["HOBBY", "BOOKS"],
     "bio": "Bookworm friend who loves discussing novels over coffee.",
-    "goal": 14,
-    "next_due_date": "2026-04-16"
+    "goal": 30,
+    "next_due_date": "2026-04-16",
+    "preferred_contact": "Text"
   },
   {
     "id": 12,
@@ -141,6 +152,7 @@
     "tags": ["WORK", "TECH"],
     "bio": "Developer friend who helps me debug tricky problems.",
     "goal": 14,
-    "next_due_date": "2026-04-27"
+    "next_due_date": "2026-04-27",
+    "preferred_contact": "Call"
   }
 ]
