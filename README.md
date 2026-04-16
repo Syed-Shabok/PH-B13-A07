@@ -8,7 +8,7 @@ It allows users to log calls, texts, and video interactions, and provides a time
 
 ## 🚀 Live Demo
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Project-2ea44f?style=for-the-badge&logo=vercel&logoColor=white)](https://keenkeeper-two.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Project-2ea44f?style=for-the-badge&logo=vercel&logoColor=white)](https://thekeenkeeper.vercel.app)
 
 ---
 
