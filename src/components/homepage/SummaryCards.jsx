@@ -3,6 +3,7 @@ import { FriendContext } from "../../context/FriendContextProvider";
 
 const SummaryCards = () => {
   const { friendsList } = useContext(FriendContext);
+  const { interactions } = useContext(FriendContext);
 
   return (
     <section>
@@ -41,8 +42,10 @@ const SummaryCards = () => {
         <div className="flex flex-col items-center justify-center bg-[#FFFFFF] py-8 px-4 rounded-lg shadow-sm border border-gray-100">
           <h3 className="text-3xl font-bold text-[#244D3F]">
             {
-              friendsList.filter((friend) => friend.days_since_contact <= 30)
-                .length
+              // friendsList.filter((friend) => friend.days_since_contact <= 30)
+              //   .length
+
+              interactions.length
             }
           </h3>
 
