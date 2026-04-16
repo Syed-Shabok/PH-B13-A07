@@ -39,11 +39,6 @@ const Timeline = () => {
       filterTimeOption === "Oldest" ? a.time - b.time : b.time - a.time,
     );
 
-    // ask why warning!!
-    // ask why warning!!
-    // ask why warning!!
-    // ask why warning!!
-    // ask why warning!!
     setDisplayInteractions(filteredList);
   }, [interactions, filterOption, filterTimeOption, searchInput]);
 
