@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import textIcon from "../../assets/text.png";
+import { FriendContext } from "../../context/FriendContextProvider";
+import TimelineCard from "../../components/ui/TimelineCard";
+import { LiaUserFriendsSolid } from "react-icons/lia";
 
 const Timeline = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [filterOption, setFilterOption] = useState("Filter Timeline");
+
+  const { interactions, setInteractions } = useContext(FriendContext);
 
   const handleDropdownSelect = (option) => {
     setFilterOption(option);
@@ -39,9 +43,19 @@ const Timeline = () => {
         </div>
       </div>
 
-      {/* Timeline Cards */}
-      <div className="flex flex-col gap-6">
-        {/* Cards will be rendered here */}
+      {/* Timeline Cards Container*/}
+      <div className="flex flex-col gap-6 min-h-[65vh]">
+        {interactions.length === 0 ? (
+          <div className="h-[65vh] flex flex-col items-center justify-center gap-5 bg-[#FFFFFF] rounded-lg shadow-sm border border-gray-200 text-gray-500">
+            <LiaUserFriendsSolid size={70} />
+
+            <h1 className="text-3xl">You currently have no interactions.</h1>
+          </div>
+        ) : (
+          interactions.map((interaction, index) => (
+            <TimelineCard key={index} interaction={interaction} />
+          ))
+        )}
       </div>
     </section>
   );

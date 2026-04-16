@@ -16,29 +16,34 @@ import { toast } from "react-toastify";
 
 const FriendDetails = () => {
   const { friendId } = useParams();
-  const { friendsList, loading } = useContext(FriendContext);
-  const [interactions, setInteractions] = useState([]);
+  const { friendsList, loading, interactions, setInteractions } =
+    useContext(FriendContext);
 
   const friend = friendsList.find((f) => f.id === Number(friendId));
-
-  // console.log(friend);
 
   const handleInteraction = (interactionType) => {
     const interaction = {
       type: interactionType,
       personName: friend.name,
-      personId: friend.friendId,
+      personId: friend.id,
       time: Date.now(),
     };
 
     setInteractions([...interactions, interaction]);
 
-    toast.success(`${interactionType} with ${friend.name}`, {
-      position: "top-center",
-    });
+    toast.success(
+      `${
+        interactionType === "Call"
+          ? "Called"
+          : interactionType === "Text"
+            ? "Texted with"
+            : "Video called"
+      } ${friend.name}`,
+      {
+        position: "top-center",
+      },
+    );
   };
-
-  console.log(interactions);
 
   return loading ? (
     <LoadingSpinner />

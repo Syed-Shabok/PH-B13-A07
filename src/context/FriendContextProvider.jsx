@@ -5,6 +5,9 @@ export const FriendContext = createContext();
 const FriendContextProvider = ({ children }) => {
   const [friendsList, setFriendsList] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [interactions, setInteractions] = useState([]);
+
+  // console.log(interactions);
 
   useEffect(() => {
     const fetchFriends = async () => {
@@ -20,7 +23,7 @@ const FriendContextProvider = ({ children }) => {
     fetchFriends();
   }, []);
 
-  const data = { friendsList, loading };
+  const data = { friendsList, loading, interactions, setInteractions };
 
   return (
     <FriendContext.Provider value={data}>{children}</FriendContext.Provider>
