@@ -8,7 +8,7 @@ const AllFriends = () => {
   const { friendsList } = useContext(FriendContext);
 
   return (
-    <section className="my-10 space-y-5">
+    <section className="mt-10 mb-20 space-y-5">
       <h3 className="text-3xl font-semibold">Your Friends</h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4 gap-7">
         {friendsList.map((friend) => (

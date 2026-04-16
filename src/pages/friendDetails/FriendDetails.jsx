@@ -77,7 +77,7 @@ const FriendDetails = () => {
 
             <p className="text-xl italic text-gray-600 text-center">{`"${friend.bio}"`}</p>
 
-            <p className="text-lg text-gray-400">{`Preferred: ${friend.preferred_contact}`}</p>
+            <p className="text-lg text-gray-400">{`${friend.email}`}</p>
           </div>
 
           {/* Buttons below image card */}

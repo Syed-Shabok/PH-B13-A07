@@ -18,13 +18,13 @@ const Footer = () => {
           Social Links
         </h4>
         <div className="flex items-center justify-center gap-3">
-          <a href="">
+          <a className="cursor-pointer">
             <img src={instagram} alt="Instagram Logo" />
           </a>
-          <a href="">
+          <a className="cursor-pointer">
             <img src={facebook} alt="Facebook Logo" />
           </a>
-          <a href="">
+          <a className="cursor-pointer">
             <img src={twitter} alt="Twitter Logo" />
           </a>
         </div>
@@ -37,9 +37,9 @@ const Footer = () => {
           </p>
 
           <div className="text-[#fafafa] text-sm md:text-lg flex gap-3 md:gap-6">
-            <a href="">Privacy Policy</a>
-            <a href="">Terms of Service</a>
-            <a href="">Cookies</a>
+            <a className="cursor-pointer">Privacy Policy</a>
+            <a className="cursor-pointer">Terms of Service</a>
+            <a className="cursor-pointer">Cookies</a>
           </div>
         </div>
       </div>
