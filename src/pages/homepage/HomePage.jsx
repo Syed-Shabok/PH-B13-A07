@@ -13,7 +13,7 @@ const HomePage = () => {
     <div className="container mx-auto px-5">
       <div className="flex flex-col items-center justify-center gap-5  mt-10 md:mt-15 lg:mt-20 mb-10">
         <h1 className=" text-3xl md:text-4xl lg:text-6xl font-bold text-center">
-          Friends to keep close in your life!!
+          Friends to keep close in your life
         </h1>
 
         <p className="md:text-lg lg:text-xl text-center md:w-[80%] xl:w-[55%] text-gray-500">

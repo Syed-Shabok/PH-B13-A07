@@ -25,7 +25,11 @@ const TimelineCard = ({ interaction }) => {
         </h3>
 
         <p className="text-gray-500">
-          {new Date(interaction.time).toLocaleDateString("en-US", {
+          {new Date(interaction.time).toLocaleString("en-US", {
+            hour: "numeric",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: true,
             month: "long",
             day: "numeric",
             year: "numeric",
